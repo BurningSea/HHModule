@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DA07215824A8E55400383978 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07215724A8E55400383978 /* Promise.swift */; };
+		DA47B61F24A9CE470088800B /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = DA47B61E24A9CE470088800B /* Promises */; };
+		DA47B62124A9D0260088800B /* RootStrongDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B62024A9D0260088800B /* RootStrongDependencies.swift */; };
 		DA591C9D24A5EEF400B24DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */; };
 		DA591CA124A5EEF400B24DBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CA024A5EEF400B24DBB /* RootViewController.swift */; };
 		DA591CA624A5EEF900B24DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA591CA524A5EEF900B24DBB /* Assets.xcassets */; };
@@ -19,7 +21,7 @@
 		DA591CD624A5FDB700B24DBB /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD524A5FDB700B24DBB /* VC2.swift */; };
 		DA591CD824A5FDC300B24DBB /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD724A5FDC300B24DBB /* VC3.swift */; };
 		DA591CDB24A5FDEE00B24DBB /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CDA24A5FDEE00B24DBB /* Service1.swift */; };
-		DA591CE424A5FE7A00B24DBB /* RootDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */; };
+		DA591CE424A5FE7A00B24DBB /* RootWeakDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE324A5FE7A00B24DBB /* RootWeakDependencies.swift */; };
 		DA591CE624A5FEC300B24DBB /* RootDepInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE524A5FEC300B24DBB /* RootDepInjector.swift */; };
 		DA591CE824A6027800B24DBB /* VC2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE724A6027800B24DBB /* VC2Builder.swift */; };
 		DA591CEE24A6040700B24DBB /* VC1Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CED24A6040700B24DBB /* VC1Module.swift */; };
@@ -54,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		DA07215724A8E55400383978 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		DA47B62024A9D0260088800B /* RootStrongDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStrongDependencies.swift; sourceTree = "<group>"; };
 		DA591C9924A5EEF400B24DBB /* HHModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA591CA024A5EEF400B24DBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +74,7 @@
 		DA591CD524A5FDB700B24DBB /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		DA591CD724A5FDC300B24DBB /* VC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
 		DA591CDA24A5FDEE00B24DBB /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
-		DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDependencies.swift; sourceTree = "<group>"; };
+		DA591CE324A5FE7A00B24DBB /* RootWeakDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWeakDependencies.swift; sourceTree = "<group>"; };
 		DA591CE524A5FEC300B24DBB /* RootDepInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDepInjector.swift; sourceTree = "<group>"; };
 		DA591CE724A6027800B24DBB /* VC2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2Builder.swift; sourceTree = "<group>"; };
 		DA591CED24A6040700B24DBB /* VC1Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1Module.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA47B61F24A9CE470088800B /* Promises in Frameworks */,
 				DA591D0424A6319800B24DBB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +244,8 @@
 		DA591CDD24A5FE0000B24DBB /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */,
+				DA591CE324A5FE7A00B24DBB /* RootWeakDependencies.swift */,
+				DA47B62024A9D0260088800B /* RootStrongDependencies.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 			name = HHModule;
 			packageProductDependencies = (
 				DA591D0324A6319800B24DBB /* SnapKit */,
+				DA47B61E24A9CE470088800B /* Promises */,
 			);
 			productName = HHModule;
 			productReference = DA591C9924A5EEF400B24DBB /* HHModule.app */;
@@ -460,6 +466,7 @@
 			mainGroup = DA591C9024A5EEF400B24DBB;
 			packageReferences = (
 				DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DA47B61D24A9CE470088800B /* XCRemoteSwiftPackageReference "promises" */,
 			);
 			productRefGroup = DA591C9A24A5EEF400B24DBB /* Products */;
 			projectDirPath = "";
@@ -506,7 +513,7 @@
 				DA591CA124A5EEF400B24DBB /* RootViewController.swift in Sources */,
 				DA591CD224A5EF5E00B24DBB /* Context.swift in Sources */,
 				DA07215824A8E55400383978 /* Promise.swift in Sources */,
-				DA591CE424A5FE7A00B24DBB /* RootDependencies.swift in Sources */,
+				DA591CE424A5FE7A00B24DBB /* RootWeakDependencies.swift in Sources */,
 				DA591CF324A6065300B24DBB /* VC2Module.swift in Sources */,
 				DA591CFE24A6217900B24DBB /* IService2.swift in Sources */,
 				DA591CFC24A6216400B24DBB /* Service2.swift in Sources */,
@@ -514,6 +521,7 @@
 				DA591CE624A5FEC300B24DBB /* RootDepInjector.swift in Sources */,
 				DA591CF724A608BB00B24DBB /* Service1Module.swift in Sources */,
 				DA591CD424A5FDA900B24DBB /* VC1.swift in Sources */,
+				DA47B62124A9D0260088800B /* RootStrongDependencies.swift in Sources */,
 				DA591CF124A6042D00B24DBB /* Module.swift in Sources */,
 				DA591CF524A607B400B24DBB /* RootModule.swift in Sources */,
 				DA591CDB24A5FDEE00B24DBB /* Service1.swift in Sources */,
@@ -850,6 +858,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA47B61D24A9CE470088800B /* XCRemoteSwiftPackageReference "promises" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/promises";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.9;
+			};
+		};
 		DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -861,6 +877,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA47B61E24A9CE470088800B /* Promises */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA47B61D24A9CE470088800B /* XCRemoteSwiftPackageReference "promises" */;
+			productName = Promises;
+		};
 		DA591D0324A6319800B24DBB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */;

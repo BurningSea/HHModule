@@ -13,10 +13,10 @@ enum AwaitResult<V, E> {
     case Error(E)
 }
 
-protocol Promise {
+protocol AnyPromise {
     associatedtype Value
     associatedtype Err = Error
-    func then<P: Promise>(_ preferQueue: DispatchQueue?,
+    func then<P: AnyPromise>(_ preferQueue: DispatchQueue?,
                           _ thenWork: (Value) -> (P.Value)) -> P where P.Err == Err
     func `catch`(_ preferQueue: DispatchQueue?,
                  _ catchWork: (Err) -> Void)
@@ -24,8 +24,8 @@ protocol Promise {
     func await(_ preferQueue: DispatchQueue?) -> AwaitResult<Value, Err>
 }
 
-extension Promise {
-    func then<P: Promise>(_ thenWork: (Value) -> (P.Value)) -> P where P.Err == Err {
+extension AnyPromise {
+    func then<P: AnyPromise>(_ thenWork: (Value) -> (P.Value)) -> P where P.Err == Err {
         return then(nil, thenWork)
     }
     

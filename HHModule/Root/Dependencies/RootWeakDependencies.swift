@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RootDependencies {
+protocol RootWeakDependencies {
     func vc1() -> VC1
     func vc2() -> VC2
     func service1() -> Service1

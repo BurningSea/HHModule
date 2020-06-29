@@ -8,11 +8,17 @@
 
 import UIKit
 
-class RootDepInjector: NSObject, RootDependencies {
+class RootDepInjector: NSObject, RootWeakDependencies {
+    func service2() -> IService2 {
+        return _service2!
+    }
+    
     fileprivate var context: () -> Context
+    fileprivate var _service2: IService2?
     
     init(context: @escaping ()-> Context) {
         self.context = context
+        _service2 = context().cached.service()
     }
     
     func vc1() -> VC1 {
@@ -28,11 +34,6 @@ class RootDepInjector: NSObject, RootDependencies {
     
     func service1() -> Service1 {
         let service: Service1? = context().service()
-        return service!
-    }
-    
-    func service2() -> IService2 {
-        let service: IService2? = context().cached.service()
         return service!
     }
     

@@ -13,7 +13,7 @@ class Service2Module: Module {
         let service2: () -> IService2 = {
             return Service2()
         }
-        let registry = context.registry {
+        var registry = context.registry {
             print("Service2 Prepared")
         }
         registry.register(recipe: service2)

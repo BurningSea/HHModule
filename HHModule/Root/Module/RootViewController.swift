@@ -11,13 +11,23 @@ import SnapKit
 import Combine
 
 class RootViewController: UIViewController {
-    var dependencies: RootDependencies?
+    var weakDependencies: RootWeakDependencies?
+    fileprivate var strongDependencies: RootStrongDependencies
     lazy var cancelable = [Cancellable]()
     
     deinit {
         for c in cancelable {
             c.cancel()
         }
+    }
+    
+    init(_ deps: RootStrongDependencies) {
+        strongDependencies = deps
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -29,7 +39,7 @@ class RootViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            guard let vc1 = self.dependencies?.vc1() else {
+            guard let vc1 = self.weakDependencies?.vc1() else {
                 return
             }
             
@@ -43,7 +53,7 @@ class RootViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            guard let vc2 = self.dependencies?.vc2() else {
+            guard let vc2 = self.weakDependencies?.vc2() else {
                 return
             }
             print("Push VC2 \(vc2)")
@@ -56,7 +66,7 @@ class RootViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            guard let service1 = self.dependencies?.service1() else {
+            guard let service1 = self.weakDependencies?.service1() else {
                 return
             }
             service1.foo()
@@ -68,7 +78,7 @@ class RootViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            guard let service2 = self.dependencies?.service2() else {
+            guard let service2 = self.weakDependencies?.service2() else {
                 return
             }
             service2.foo()
@@ -80,7 +90,7 @@ class RootViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            guard let service21 = self.dependencies?.service21() else {
+            guard let service21 = self.weakDependencies?.service21() else {
                 return
             }
             service21.foo()
