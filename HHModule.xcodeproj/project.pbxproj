@@ -3,18 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA07215824A8E55400383978 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07215724A8E55400383978 /* Promise.swift */; };
 		DA591C9D24A5EEF400B24DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */; };
-		DA591C9F24A5EEF400B24DBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591C9E24A5EEF400B24DBB /* SceneDelegate.swift */; };
-		DA591CA124A5EEF400B24DBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CA024A5EEF400B24DBB /* ViewController.swift */; };
-		DA591CA424A5EEF400B24DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA591CA224A5EEF400B24DBB /* Main.storyboard */; };
+		DA591CA124A5EEF400B24DBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CA024A5EEF400B24DBB /* RootViewController.swift */; };
 		DA591CA624A5EEF900B24DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA591CA524A5EEF900B24DBB /* Assets.xcassets */; };
 		DA591CA924A5EEF900B24DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA591CA724A5EEF900B24DBB /* LaunchScreen.storyboard */; };
 		DA591CB424A5EEF900B24DBB /* HHModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CB324A5EEF900B24DBB /* HHModuleTests.swift */; };
 		DA591CBF24A5EEF900B24DBB /* HHModuleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CBE24A5EEF900B24DBB /* HHModuleUITests.swift */; };
+		DA591CD224A5EF5E00B24DBB /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD124A5EF5E00B24DBB /* Context.swift */; };
+		DA591CD424A5FDA900B24DBB /* VC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD324A5FDA900B24DBB /* VC1.swift */; };
+		DA591CD624A5FDB700B24DBB /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD524A5FDB700B24DBB /* VC2.swift */; };
+		DA591CD824A5FDC300B24DBB /* VC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CD724A5FDC300B24DBB /* VC3.swift */; };
+		DA591CDB24A5FDEE00B24DBB /* Service1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CDA24A5FDEE00B24DBB /* Service1.swift */; };
+		DA591CE424A5FE7A00B24DBB /* RootDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */; };
+		DA591CE624A5FEC300B24DBB /* RootDepInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE524A5FEC300B24DBB /* RootDepInjector.swift */; };
+		DA591CE824A6027800B24DBB /* VC2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CE724A6027800B24DBB /* VC2Builder.swift */; };
+		DA591CEE24A6040700B24DBB /* VC1Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CED24A6040700B24DBB /* VC1Module.swift */; };
+		DA591CF124A6042D00B24DBB /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CF024A6042D00B24DBB /* Module.swift */; };
+		DA591CF324A6065300B24DBB /* VC2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CF224A6065300B24DBB /* VC2Module.swift */; };
+		DA591CF524A607B400B24DBB /* RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CF424A607B400B24DBB /* RootModule.swift */; };
+		DA591CF724A608BB00B24DBB /* Service1Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CF624A608BB00B24DBB /* Service1Module.swift */; };
+		DA591CFC24A6216400B24DBB /* Service2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CFB24A6216400B24DBB /* Service2.swift */; };
+		DA591CFE24A6217900B24DBB /* IService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CFD24A6217900B24DBB /* IService2.swift */; };
+		DA591D0124A6220800B24DBB /* Service2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591D0024A6220800B24DBB /* Service2Module.swift */; };
+		DA591D0424A6319800B24DBB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DA591D0324A6319800B24DBB /* SnapKit */; };
+		DAA9A3C324A63F240030DAE9 /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9A3C224A63F240030DAE9 /* UIControlPublisher.swift */; };
+		DAA9A3C524A644220030DAE9 /* Service21.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9A3C424A644220030DAE9 /* Service21.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA07215724A8E55400383978 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		DA591C9924A5EEF400B24DBB /* HHModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA591C9E24A5EEF400B24DBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA591CA024A5EEF400B24DBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA591CA324A5EEF400B24DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA591CA024A5EEF400B24DBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		DA591CA524A5EEF900B24DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA591CA824A5EEF900B24DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA591CAA24A5EEF900B24DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +66,25 @@
 		DA591CBA24A5EEF900B24DBB /* HHModuleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHModuleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA591CBE24A5EEF900B24DBB /* HHModuleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHModuleUITests.swift; sourceTree = "<group>"; };
 		DA591CC024A5EEF900B24DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA591CD124A5EF5E00B24DBB /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		DA591CD324A5FDA900B24DBB /* VC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1.swift; sourceTree = "<group>"; };
+		DA591CD524A5FDB700B24DBB /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		DA591CD724A5FDC300B24DBB /* VC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC3.swift; sourceTree = "<group>"; };
+		DA591CDA24A5FDEE00B24DBB /* Service1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1.swift; sourceTree = "<group>"; };
+		DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDependencies.swift; sourceTree = "<group>"; };
+		DA591CE524A5FEC300B24DBB /* RootDepInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDepInjector.swift; sourceTree = "<group>"; };
+		DA591CE724A6027800B24DBB /* VC2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2Builder.swift; sourceTree = "<group>"; };
+		DA591CED24A6040700B24DBB /* VC1Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC1Module.swift; sourceTree = "<group>"; };
+		DA591CF024A6042D00B24DBB /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		DA591CF224A6065300B24DBB /* VC2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2Module.swift; sourceTree = "<group>"; };
+		DA591CF424A607B400B24DBB /* RootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModule.swift; sourceTree = "<group>"; };
+		DA591CF624A608BB00B24DBB /* Service1Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service1Module.swift; sourceTree = "<group>"; };
+		DA591CFB24A6216400B24DBB /* Service2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service2.swift; sourceTree = "<group>"; };
+		DA591CFD24A6217900B24DBB /* IService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IService2.swift; sourceTree = "<group>"; };
+		DA591D0024A6220800B24DBB /* Service2Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service2Module.swift; sourceTree = "<group>"; };
+		DAA9A3C024A63B130030DAE9 /* HHModule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HHModule.entitlements; sourceTree = "<group>"; };
+		DAA9A3C224A63F240030DAE9 /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
+		DAA9A3C424A644220030DAE9 /* Service21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service21.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA591D0424A6319800B24DBB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,11 +136,17 @@
 		DA591C9B24A5EEF400B24DBB /* HHModule */ = {
 			isa = PBXGroup;
 			children = (
+				DAA9A3C024A63B130030DAE9 /* HHModule.entitlements */,
 				DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */,
-				DA591C9E24A5EEF400B24DBB /* SceneDelegate.swift */,
-				DA591CA024A5EEF400B24DBB /* ViewController.swift */,
-				DA591CA224A5EEF400B24DBB /* Main.storyboard */,
+				DA591CD024A5EF3B00B24DBB /* HHModule */,
+				DA591CF824A6213800B24DBB /* Service2 */,
+				DA591CD924A5FDD200B24DBB /* Service1 */,
+				DA591CCF24A5EF3300B24DBB /* VC3 */,
+				DA591CCE24A5EF2900B24DBB /* VC2 */,
+				DA591CCD24A5EF2200B24DBB /* VC1 */,
+				DA591CCC24A5EF1800B24DBB /* Root */,
 				DA591CA524A5EEF900B24DBB /* Assets.xcassets */,
+				DAA9A3C124A63F050030DAE9 /* UIControlPublisher */,
 				DA591CA724A5EEF900B24DBB /* LaunchScreen.storyboard */,
 				DA591CAA24A5EEF900B24DBB /* Info.plist */,
 			);
@@ -128,6 +171,202 @@
 			path = HHModuleUITests;
 			sourceTree = "<group>";
 		};
+		DA591CCC24A5EF1800B24DBB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CEF24A6041400B24DBB /* ModuleNode */,
+				DA591CE024A5FE2600B24DBB /* DependencyInjectors */,
+				DA591CDD24A5FE0000B24DBB /* Dependencies */,
+				DA591CDC24A5FDF800B24DBB /* Module */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DA591CCD24A5EF2200B24DBB /* VC1 */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CE924A6030A00B24DBB /* ModuleNode */,
+				DA591CDF24A5FE1000B24DBB /* Interfaces */,
+				DA591CDE24A5FE0700B24DBB /* Module */,
+			);
+			path = VC1;
+			sourceTree = "<group>";
+		};
+		DA591CCE24A5EF2900B24DBB /* VC2 */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CEA24A603C800B24DBB /* ModuleNode */,
+				DA591CE224A5FE5800B24DBB /* Interfaces */,
+				DA591CE124A5FE4D00B24DBB /* Module */,
+			);
+			path = VC2;
+			sourceTree = "<group>";
+		};
+		DA591CCF24A5EF3300B24DBB /* VC3 */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CD724A5FDC300B24DBB /* VC3.swift */,
+			);
+			path = VC3;
+			sourceTree = "<group>";
+		};
+		DA591CD024A5EF3B00B24DBB /* HHModule */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CD124A5EF5E00B24DBB /* Context.swift */,
+				DA591CF024A6042D00B24DBB /* Module.swift */,
+				DA07215724A8E55400383978 /* Promise.swift */,
+			);
+			path = HHModule;
+			sourceTree = "<group>";
+		};
+		DA591CD924A5FDD200B24DBB /* Service1 */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CEC24A603E800B24DBB /* ModuleNode */,
+				DA591CEB24A603E300B24DBB /* Module */,
+			);
+			path = Service1;
+			sourceTree = "<group>";
+		};
+		DA591CDC24A5FDF800B24DBB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CA024A5EEF400B24DBB /* RootViewController.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA591CDD24A5FE0000B24DBB /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CE324A5FE7A00B24DBB /* RootDependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		DA591CDE24A5FE0700B24DBB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CD324A5FDA900B24DBB /* VC1.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA591CDF24A5FE1000B24DBB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DA591CE024A5FE2600B24DBB /* DependencyInjectors */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CE524A5FEC300B24DBB /* RootDepInjector.swift */,
+			);
+			path = DependencyInjectors;
+			sourceTree = "<group>";
+		};
+		DA591CE124A5FE4D00B24DBB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CD524A5FDB700B24DBB /* VC2.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA591CE224A5FE5800B24DBB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CE724A6027800B24DBB /* VC2Builder.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DA591CE924A6030A00B24DBB /* ModuleNode */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CED24A6040700B24DBB /* VC1Module.swift */,
+			);
+			path = ModuleNode;
+			sourceTree = "<group>";
+		};
+		DA591CEA24A603C800B24DBB /* ModuleNode */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CF224A6065300B24DBB /* VC2Module.swift */,
+			);
+			path = ModuleNode;
+			sourceTree = "<group>";
+		};
+		DA591CEB24A603E300B24DBB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CDA24A5FDEE00B24DBB /* Service1.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA591CEC24A603E800B24DBB /* ModuleNode */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CF624A608BB00B24DBB /* Service1Module.swift */,
+			);
+			path = ModuleNode;
+			sourceTree = "<group>";
+		};
+		DA591CEF24A6041400B24DBB /* ModuleNode */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CF424A607B400B24DBB /* RootModule.swift */,
+			);
+			path = ModuleNode;
+			sourceTree = "<group>";
+		};
+		DA591CF824A6213800B24DBB /* Service2 */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CFF24A6217F00B24DBB /* Interfaces */,
+				DA591CFA24A6214B00B24DBB /* Module */,
+				DA591CF924A6214400B24DBB /* ModuleNode */,
+			);
+			path = Service2;
+			sourceTree = "<group>";
+		};
+		DA591CF924A6214400B24DBB /* ModuleNode */ = {
+			isa = PBXGroup;
+			children = (
+				DA591D0024A6220800B24DBB /* Service2Module.swift */,
+			);
+			path = ModuleNode;
+			sourceTree = "<group>";
+		};
+		DA591CFA24A6214B00B24DBB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CFB24A6216400B24DBB /* Service2.swift */,
+				DAA9A3C424A644220030DAE9 /* Service21.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		DA591CFF24A6217F00B24DBB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				DA591CFD24A6217900B24DBB /* IService2.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		DAA9A3C124A63F050030DAE9 /* UIControlPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				DAA9A3C224A63F240030DAE9 /* UIControlPublisher.swift */,
+			);
+			path = UIControlPublisher;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +383,9 @@
 			dependencies = (
 			);
 			name = HHModule;
+			packageProductDependencies = (
+				DA591D0324A6319800B24DBB /* SnapKit */,
+			);
 			productName = HHModule;
 			productReference = DA591C9924A5EEF400B24DBB /* HHModule.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +458,9 @@
 				Base,
 			);
 			mainGroup = DA591C9024A5EEF400B24DBB;
+			packageReferences = (
+				DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DA591C9A24A5EEF400B24DBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,7 +479,6 @@
 			files = (
 				DA591CA924A5EEF900B24DBB /* LaunchScreen.storyboard in Resources */,
 				DA591CA624A5EEF900B24DBB /* Assets.xcassets in Resources */,
-				DA591CA424A5EEF400B24DBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +503,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA591CA124A5EEF400B24DBB /* ViewController.swift in Sources */,
+				DA591CA124A5EEF400B24DBB /* RootViewController.swift in Sources */,
+				DA591CD224A5EF5E00B24DBB /* Context.swift in Sources */,
+				DA07215824A8E55400383978 /* Promise.swift in Sources */,
+				DA591CE424A5FE7A00B24DBB /* RootDependencies.swift in Sources */,
+				DA591CF324A6065300B24DBB /* VC2Module.swift in Sources */,
+				DA591CFE24A6217900B24DBB /* IService2.swift in Sources */,
+				DA591CFC24A6216400B24DBB /* Service2.swift in Sources */,
+				DAA9A3C524A644220030DAE9 /* Service21.swift in Sources */,
+				DA591CE624A5FEC300B24DBB /* RootDepInjector.swift in Sources */,
+				DA591CF724A608BB00B24DBB /* Service1Module.swift in Sources */,
+				DA591CD424A5FDA900B24DBB /* VC1.swift in Sources */,
+				DA591CF124A6042D00B24DBB /* Module.swift in Sources */,
+				DA591CF524A607B400B24DBB /* RootModule.swift in Sources */,
+				DA591CDB24A5FDEE00B24DBB /* Service1.swift in Sources */,
+				DA591CD624A5FDB700B24DBB /* VC2.swift in Sources */,
+				DA591D0124A6220800B24DBB /* Service2Module.swift in Sources */,
+				DA591CD824A5FDC300B24DBB /* VC3.swift in Sources */,
+				DA591CEE24A6040700B24DBB /* VC1Module.swift in Sources */,
+				DA591CE824A6027800B24DBB /* VC2Builder.swift in Sources */,
 				DA591C9D24A5EEF400B24DBB /* AppDelegate.swift in Sources */,
-				DA591C9F24A5EEF400B24DBB /* SceneDelegate.swift in Sources */,
+				DAA9A3C324A63F240030DAE9 /* UIControlPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +559,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DA591CA224A5EEF400B24DBB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA591CA324A5EEF400B24DBB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA591CA724A5EEF900B24DBB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -434,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HHModule/HHModule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WJMW7HLW85;
 				INFOPLIST_FILE = HHModule/Info.plist;
@@ -443,6 +698,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.howie.HHModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +708,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HHModule/HHModule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WJMW7HLW85;
 				INFOPLIST_FILE = HHModule/Info.plist;
@@ -461,6 +718,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.howie.HHModule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -590,6 +848,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA591D0324A6319800B24DBB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA591D0224A6319800B24DBB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA591C9124A5EEF400B24DBB /* Project object */;
 }

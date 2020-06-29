@@ -1,0 +1,98 @@
+//
+//  ViewController.swift
+//  HHModule
+//
+//  Created by Howie on 26/6/20.
+//  Copyright © 2020 Beijing Bitstar Technology Co., Ltd. All rights reserved.
+//
+
+import UIKit
+import SnapKit
+import Combine
+
+class RootViewController: UIViewController {
+    var dependencies: RootDependencies?
+    lazy var cancelable = [Cancellable]()
+    
+    deinit {
+        for c in cancelable {
+            c.cancel()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        let button1 = UIButton(type: .custom)
+        button1.setTitle("VC1", for: .normal)
+        cancelable.append(button1.publisher(for: .touchUpInside).sink { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            guard let vc1 = self.dependencies?.vc1() else {
+                return
+            }
+            
+            print("Push VC1 \(vc1)")
+            self.navigationController?.pushViewController(vc1, animated: true)
+        })
+        
+        let button2 = UIButton(type: .custom)
+        button2.setTitle("VC2", for: .normal)
+        cancelable.append(button2.publisher(for: .touchUpInside).sink { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            guard let vc2 = self.dependencies?.vc2() else {
+                return
+            }
+            print("Push VC2 \(vc2)")
+            self.navigationController?.pushViewController(vc2, animated: true)
+        })
+        
+        let button3 = UIButton(type: .custom)
+        button3.setTitle("Service1", for: .normal)
+        cancelable.append(button3.publisher(for: .touchUpInside).sink { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            guard let service1 = self.dependencies?.service1() else {
+                return
+            }
+            service1.foo()
+        })
+        
+        let button4 = UIButton(type: .custom)
+        button4.setTitle("Service2", for: .normal)
+        cancelable.append(button4.publisher(for: .touchUpInside).sink { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            guard let service2 = self.dependencies?.service2() else {
+                return
+            }
+            service2.foo()
+        })
+        
+        let button5 = UIButton(type: .custom)
+        button5.setTitle("Service21", for: .normal)
+        cancelable.append(button5.publisher(for: .touchUpInside).sink { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            guard let service21 = self.dependencies?.service21() else {
+                return
+            }
+            service21.foo()
+        })
+        
+        let stackView = UIStackView(arrangedSubviews: [button1, button2, button3, button4, button5])
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        view.addSubview(stackView)
+        stackView.snp.makeConstraints { (make) in
+            make.center.equalTo(view)
+        }
+    }
+}
+
