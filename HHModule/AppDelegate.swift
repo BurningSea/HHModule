@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Promises
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController: RootViewController? = rootModule.parentContext.service()
         window.rootViewController = UINavigationController(rootViewController: rootViewController!)
         window.makeKeyAndVisible()
+        var promise = Promise(999)
+        var then  = promise.then { return $0 * 1000 }
+        let result = then.pawait()
+        print("\(result)")
+        
         return true
     }
 }

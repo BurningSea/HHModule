@@ -16,25 +16,25 @@ enum AwaitResult<V, E> {
 protocol AnyPromise {
     associatedtype Value
     associatedtype Err = Error
-    func then<P: AnyPromise>(_ preferQueue: DispatchQueue?,
-                          _ thenWork: (Value) -> (P.Value)) -> P where P.Err == Err
-    func `catch`(_ preferQueue: DispatchQueue?,
-                 _ catchWork: (Err) -> Void)
+    mutating func pthen<P: AnyPromise>(_ preferQueue: DispatchQueue?,
+                          _ thenWork: @escaping (Value) -> (P.Value)) -> P where P.Err == Err
+    mutating func pcatch(_ preferQueue: DispatchQueue?,
+                 _ catchWork: @escaping (Err) -> Void)
     
-    func await(_ preferQueue: DispatchQueue?) -> AwaitResult<Value, Err>
+    mutating func pawait(_ preferQueue: DispatchQueue?) -> AwaitResult<Value, Err>
 }
 
 extension AnyPromise {
-    func then<P: AnyPromise>(_ thenWork: (Value) -> (P.Value)) -> P where P.Err == Err {
-        return then(nil, thenWork)
+    mutating func pthen<P: AnyPromise>(_ thenWork: @escaping (Value) -> (P.Value)) -> P where P.Err == Err {
+        return pthen(nil, thenWork)
     }
     
-    func `catch`(_ catchWork: (Err) -> Void) {
-        return `catch`(nil, catchWork)
+    mutating func pcatch(_ catchWork: @escaping (Err) -> Void) {
+        return pcatch(nil, catchWork)
     }
     
-    func await() -> AwaitResult<Value, Err> {
-        return await(nil)
+    mutating func pawait() -> AwaitResult<Value, Err> {
+        return pawait(nil)
     }
 }
 

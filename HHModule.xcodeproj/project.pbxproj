@@ -10,6 +10,7 @@
 		DA07215824A8E55400383978 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA07215724A8E55400383978 /* Promise.swift */; };
 		DA47B61F24A9CE470088800B /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = DA47B61E24A9CE470088800B /* Promises */; };
 		DA47B62124A9D0260088800B /* RootStrongDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B62024A9D0260088800B /* RootStrongDependencies.swift */; };
+		DA47B94224AF483B0088800B /* Lazy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47B94124AF483B0088800B /* Lazy.swift */; };
 		DA591C9D24A5EEF400B24DBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */; };
 		DA591CA124A5EEF400B24DBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA591CA024A5EEF400B24DBB /* RootViewController.swift */; };
 		DA591CA624A5EEF900B24DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA591CA524A5EEF900B24DBB /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		DA07215724A8E55400383978 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		DA47B62024A9D0260088800B /* RootStrongDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootStrongDependencies.swift; sourceTree = "<group>"; };
+		DA47B94124AF483B0088800B /* Lazy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lazy.swift; sourceTree = "<group>"; };
 		DA591C9924A5EEF400B24DBB /* HHModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA591C9C24A5EEF400B24DBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA591CA024A5EEF400B24DBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				DA591CD124A5EF5E00B24DBB /* Context.swift */,
 				DA591CF024A6042D00B24DBB /* Module.swift */,
 				DA07215724A8E55400383978 /* Promise.swift */,
+				DA47B94124AF483B0088800B /* Lazy.swift */,
 			);
 			path = HHModule;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				DA591CE424A5FE7A00B24DBB /* RootWeakDependencies.swift in Sources */,
 				DA591CF324A6065300B24DBB /* VC2Module.swift in Sources */,
 				DA591CFE24A6217900B24DBB /* IService2.swift in Sources */,
+				DA47B94224AF483B0088800B /* Lazy.swift in Sources */,
 				DA591CFC24A6216400B24DBB /* Service2.swift in Sources */,
 				DAA9A3C524A644220030DAE9 /* Service21.swift in Sources */,
 				DA591CE624A5FEC300B24DBB /* RootDepInjector.swift in Sources */,
@@ -697,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HHModule/HHModule.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WJMW7HLW85;
 				INFOPLIST_FILE = HHModule/Info.plist;
